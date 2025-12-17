@@ -1,0 +1,82 @@
+[
+  {
+    "id": "FU001",
+    "origin": "Houston, TX",
+    "destination": "Chicago, IL",
+    "commodity": "Machinery",
+    "weight_kg": 5000,
+    "volume_cbm": 20,
+    "deadline": "2025-12-20",
+    "mode": "Truck"
+  },
+  {
+    "id": "FU002",
+    "origin": "Laredo, TX",
+    "destination": "Detroit, MI",
+    "commodity": "Automotive Parts",
+    "weight_kg": 12000,
+    "volume_cbm": 45,
+    "deadline": "2025-12-22",
+    "mode": "Truck"
+  },
+  {
+    "id": "FU003",
+    "origin": "Los Angeles, CA",
+    "destination": "New York, NY",
+    "commodity": "Consumer Electronics",
+    "weight_kg": 8000,
+    "volume_cbm": 30,
+    "deadline": "2025-12-25",
+    "mode": "Rail"
+  },
+  {
+    "id": "FU004",
+    "origin": "Los Angeles, CA",
+    "destination": "New York, NY",
+    "commodity": "Consumer Electronics",
+    "weight_kg": 20000,
+    "volume_cbm": 30,
+    "deadline": "2025-12-25",
+    "mode": "Truck"
+  },
+  {
+    "id": "FU005",
+    "origin": "Dallas, TX",
+    "destination": "Atlanta, GA",
+    "commodity": "Furniture",
+    "weight_kg": 7000,
+    "volume_cbm": 25,
+    "deadline": "2025-12-28",
+    "mode": "Truck"
+  },
+  {
+    "id": "FU006",
+    "origin": "Seattle, WA",
+    "destination": "Denver, CO",
+    "commodity": "Paper Products",
+    "weight_kg": 4000,
+    "volume_cbm": 15,
+    "deadline": "2025-12-29",
+    "mode": "Rail"
+  },
+  {
+    "id": "FU007",
+    "origin": "Miami, FL",
+    "destination": "Boston, MA",
+    "commodity": "Frozen Food",
+    "weight_kg": 9000,
+    "volume_cbm": 40,
+    "deadline": "2025-12-30",
+    "mode": "Truck"
+  },
+  {
+    "id": "FU008",
+    "origin": "San Francisco, CA",
+    "destination": "Houston, TX",
+    "commodity": "Chemicals",
+    "weight_kg": 15000,
+    "volume_cbm": 50,
+    "deadline": "2026-01-02",
+    "mode": "Rail"
+  }
+]

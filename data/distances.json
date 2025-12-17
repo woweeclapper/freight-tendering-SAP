@@ -1,0 +1,38 @@
+[
+  {
+    "origin": "Houston, TX",
+    "destination": "Chicago, IL",
+    "distance_km": 1510
+  },
+  {
+    "origin": "Laredo, TX",
+    "destination": "Detroit, MI",
+    "distance_km": 2450
+  },
+  {
+    "origin": "Los Angeles, CA",
+    "destination": "New York, NY",
+    "distance_km": 4490
+  },
+  {
+    "origin": "Dallas, TX",
+    "destination": "Atlanta, GA",
+    "distance_km": 1300
+  },
+  {
+    "origin": "Seattle, WA",
+    "destination": "Denver, CO",
+    "distance_km": 2160
+  },
+  {
+    "origin": "Miami, FL",
+    "destination": "Boston, MA",
+    "distance_km": 2400
+  },
+  {
+    "origin": "San Francisco, CA",
+    "destination": "Houston, TX",
+    "distance_km": 3050
+  }
+]
+

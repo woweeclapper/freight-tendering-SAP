@@ -1,0 +1,63 @@
+[
+  {
+    "name": "CarrierA",
+    "coverage": ["TX", "IL"],
+    "capacity_kg": 6000,
+    "modes": ["Truck"],
+    "rates": {
+      "(Houston, TX, Chicago, IL)": 1.2,
+      "(Laredo, TX, Detroit, MI)": 1.3
+    }
+  },
+  {
+    "name": "CarrierB",
+    "coverage": ["TX", "IL", "MI", "CA", "NY"],
+    "capacity_kg": 15000,
+    "modes": ["Truck", "Rail"],
+    "rates": {
+      "(Houston, TX, Chicago, IL)": 1.0,
+      "(Laredo, TX, Detroit, MI)": 1.1,
+      "(Los Angeles, CA, New York, NY)": 0.9
+    }
+  },
+  {
+    "name": "CarrierC",
+    "coverage": ["CA", "NY"],
+    "capacity_kg": 10000,
+    "modes": ["Rail"],
+    "rates": {
+      "(Los Angeles, CA, New York, NY)": 1.4
+    }
+  },
+  {
+    "name": "CarrierD",
+    "coverage": ["TX", "GA", "FL", "MA"],
+    "capacity_kg": 10000,
+    "modes": ["Truck"],
+    "rates": {
+      "(Dallas, TX, Atlanta, GA)": 1.1,
+      "(Miami, FL, Boston, MA)": 1.3
+    }
+  },
+  {
+    "name": "CarrierE",
+    "coverage": ["WA", "CO", "CA", "TX"],
+    "capacity_kg": 20000,
+    "modes": ["Rail"],
+    "rates": {
+      "(Seattle, WA, Denver, CO)": 0.8,
+      "(San Francisco, CA, Houston, TX)": 1.0
+    }
+  },
+  {
+    "name": "CarrierF",
+    "coverage": ["FL", "MA", "GA", "TX"],
+    "capacity_kg": 12000,
+    "modes": ["Truck", "Rail"],
+    "rates": {
+      "(Miami, FL, Boston, MA)": 1.2,
+      "(Dallas, TX, Atlanta, GA)": 1.0,
+      "(San Francisco, CA, Houston, TX)": 1.1
+    }
+  }
+]
