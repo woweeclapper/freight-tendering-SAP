@@ -51,7 +51,8 @@ def run_tendering(freight_unit, carriers, distances):
                 # Calculate the cost
                 cost = distance * rate
 
-                print(f"{carrier.name} eligible: cost={cost}")
+                #TODO: Make the output cost into float with 2 decimal places
+                print(f"{carrier.name} eligible: cost = ${cost:.2f}")
 
                 # Append the response to the list of responses
                 responses.append(CarrierResponse(carrier, True, cost, 2))
