@@ -25,18 +25,14 @@ carriers = [Carrier(c["name"], c["coverage"], c["capacity_kg"], c["modes"], c["r
 # Run tendering for each shipment
 for s in shipments:
 
-    origin = s["origin"]
-    destination = s["destination"]
 
     # Get real distance using DistanceService
-    distance_km = distance_service.get_distance_km(origin, destination)
+    distance_km = distance_service.get_distance_km(s["origin"], s["destination"])
 
     #build freight unit
-    fu = FreightUnit(s["id"], origin, destination, s["weight_kg"], 20, s["deadline"], s["mode"])
+    fu = FreightUnit(s["id"], s["origin"], s["destination"], s["weight_kg"], 20, s["deadline"], s["mode"])
     
-    run_tendering(fu, carriers, {(origin, destination): distance_km})
-
-
+    run_tendering(fu, carriers, {(s["origin"], s["destination"]): distance_km})
 
 
 # Save updated distances to distances.json
