@@ -1,14 +1,17 @@
 import json
 from models import FreightUnit, Carrier
 from tendering import run_tendering
-import requests 
+from distance import DistanceService
 
-# Load shipment, carrier, and distance data
+
+distance_service = DistanceService()
+
+# Load shipment, carrier, and distance data from JSON files
 shipments = json.load(open("data/shipments.json"))
 carriers_data = json.load(open("data/carriers.json"))
-distances_data = json.load(open("data/distances.json"))
+#distances_data = json.load(open("data/distances.json"))
 
-carriers = [Carrier(c["name"], c["coverage"], c["capacity_kg"], ["Truck"], c["rates"]) for c in carriers_data]
+carriers = [Carrier(c["name"], c["coverage"], c["capacity_kg"], c["modes"], c["rates"]) for c in carriers_data]
 
 
 #TODO: Get realisitic distances using an API
@@ -17,12 +20,24 @@ carriers = [Carrier(c["name"], c["coverage"], c["capacity_kg"], ["Truck"], c["ra
 
 
 # Example using a mock function (replace with actual API calls if needed)
-distances =  {(d["origin"], d["destination"]): d["distance_km"] for d in distances_data}
 
 
 # Run tendering for each shipment
 for s in shipments:
-    fu = FreightUnit(s["id"], s["origin"], s["destination"], s["weight_kg"], 20, s["deadline"], s["mode"])
 
-    run_tendering(fu, carriers, distances)
+    origin = s["origin"]
+    destination = s["destination"]
 
+    # Get real distance using DistanceService
+    distance_km = distance_service.get_distance_km(origin, destination)
+
+    #build freight unit
+    fu = FreightUnit(s["id"], origin, destination, s["weight_kg"], 20, s["deadline"], s["mode"])
+    
+    run_tendering(fu, carriers, {(origin, destination): distance_km})
+
+
+
+
+# Save updated distances to distances.json
+print("Saved distance_cache.json with real distances.")

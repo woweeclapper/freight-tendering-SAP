@@ -38,9 +38,6 @@ def run_tendering(freight_unit, carriers, distances):
                 # Get the distance from the distances dictionary
                 distance = distances.get((freight_unit.origin, freight_unit.destination), 0)
 
-
-
-
                 # Get the key from the carrier's rates dictionary
                 key = f"({freight_unit.origin}, {freight_unit.destination})"
 
